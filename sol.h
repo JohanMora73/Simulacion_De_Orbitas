@@ -14,7 +14,7 @@ public:
     QPixmap *pixmap;
 
     int posx,posy,masa,radio;
-    float ancho,alto,vx,vy;
+    double ancho,alto,vx,vy;
     int getPosx() const;
     void setPosx(int px);
     int getPosy() const;

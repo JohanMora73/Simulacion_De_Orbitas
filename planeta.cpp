@@ -5,10 +5,10 @@ Planeta::Planeta()
     
 }
 
-Planeta::Planeta(int x, int y, int masa_, int radio_, float vx_, float vy_)
+Planeta::Planeta(int x, int y, int masa_, int radio_, double vx_, double vy_)
 {
-    posx=425+x/30;
-    posy=y/30;
+    posx=x;
+    posy=y;
     masa=masa_;
     radio=radio_/10;
     vx=vx_;
@@ -17,6 +17,11 @@ Planeta::Planeta(int x, int y, int masa_, int radio_, float vx_, float vy_)
     alto=2*radio;
 
 
+}
+
+void Planeta::posicion()
+{
+ setPos(posx+425,300-posy);
 }
 
 int Planeta::getPosx() const
@@ -39,6 +44,7 @@ void Planeta::setPosy(int py)
     posy=py;
 }
 
+
 QRectF Planeta::boundingRect() const
 {
     return QRectF(-radio,-radio,ancho,alto);
@@ -46,6 +52,6 @@ QRectF Planeta::boundingRect() const
 
 void Planeta::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    painter->setBrush(Qt::blue);
+    painter->setBrush(Qt::green);
     painter->drawEllipse(boundingRect());
 }

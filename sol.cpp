@@ -7,13 +7,13 @@ Sol::Sol()
 
 Sol::Sol(int masa_, int radio_)
 {
-    posx=425;
-    posy=300;
+    posx=0;
+    posy=0;
     masa=masa_;
     radio=radio_/10;
     ancho=2*radio;
     alto=2*radio;
-    setPos(posx,posy);
+    setPos(450,325);
 }
 
 int Sol::getPosx() const

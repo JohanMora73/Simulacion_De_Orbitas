@@ -31,14 +31,16 @@ public slots:
 private slots:
     void on_pushButton_clicked();
     
+    void on_lineEdit_inputRejected();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
     QTimer *time;
     float xi,yi,ancho,alto; //para darle el tamaño a la pantalla
-    Planeta *Tierra;
-    Sol *sol;
-    float x,y,vx,vy,T=0.05,m=70,ax,ay,G=6.674*pow(10,11),r;
+    Planeta *Mercurio, *Venus, *Tierra, *Marte, *Jupiter;
+    Sol *sol;   
+    double xk,yk,vxk,vyk,T=0.05,m=70,ax,ay,r,xs,ys,G=1;//G=6.674*pow(10,-11);
     bool band=true;;
 
 };
