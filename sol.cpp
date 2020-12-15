@@ -13,7 +13,7 @@ Sol::Sol(int masa_, int radio_)
     radio=radio_/10;
     ancho=2*radio;
     alto=2*radio;
-    setPos(450,325);
+    setPos(425,300);
 }
 
 int Sol::getPosx() const

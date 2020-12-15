@@ -5,7 +5,7 @@ Planeta::Planeta()
     
 }
 
-Planeta::Planeta(int x, int y, int masa_, int radio_, double vx_, double vy_)
+Planeta::Planeta(int x, int y, int masa_, int radio_, double vx_, double vy_, Qt::GlobalColor _color)
 {
     posx=x;
     posy=y;
@@ -15,13 +15,9 @@ Planeta::Planeta(int x, int y, int masa_, int radio_, double vx_, double vy_)
     vy=vy_;
     ancho=2*radio;
     alto=2*radio;
+    color=_color;
 
 
-}
-
-void Planeta::posicion()
-{
- setPos(posx+425,300-posy);
 }
 
 int Planeta::getPosx() const
@@ -52,6 +48,6 @@ QRectF Planeta::boundingRect() const
 
 void Planeta::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    painter->setBrush(Qt::green);
+    painter->setBrush(Qt::GlobalColor(color));
     painter->drawEllipse(boundingRect());
 }

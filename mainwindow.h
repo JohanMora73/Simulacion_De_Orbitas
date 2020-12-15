@@ -24,6 +24,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     int nuevoy(int y);
+    int velocidad(int mi);
 
 public slots:
     void simulacion();
@@ -38,9 +39,17 @@ private:
     QGraphicsScene *scene;
     QTimer *time;
     float xi,yi,ancho,alto; //para darle el tamaño a la pantalla
-    Planeta *Mercurio, *Venus, *Tierra, *Marte, *Jupiter;
+    Planeta *Venus, *Tierra, *Marte, *Jupiter, *Urano;
     Sol *sol;   
-    double xk,yk,vxk,vyk,T=0.05,m=70,ax,ay,r,xs,ys,G=1;//G=6.674*pow(10,-11);
+    double T=0.05,ax,ay,r,r1,r2,r3,r4,G=1,h=300;//G=6.674*pow(10,-11);
+
+    double xs,ys;
+    double xv,yv,vxv,vyv;//Venus
+    double xt,yt,vxt,vyt;//Tierra
+    double xm,ym,vxm,vym;//Marte
+    double xj,yj,vxj,vyj;//Jupiter
+    double xu,yu,vxu,vyu;//Urano
+
     bool band=true;;
 
 };

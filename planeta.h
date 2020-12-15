@@ -10,12 +10,14 @@ class Planeta: public QGraphicsItem, public QObject
 {
 public:
     Planeta();
-    Planeta(int x, int y, int masa_, int radio, double vx, double vy);
+    Planeta(int x, int y, int masa_, int radio, double vx, double vy, Qt::GlobalColor _color);
     QPixmap *pixmap;
 
+    Qt::GlobalColor color;
     int posx,posy,masa,radio;
     float ancho,alto;
     double vx,vy;
+
 
     void posicion();//asigna la posicon de los planetas
 

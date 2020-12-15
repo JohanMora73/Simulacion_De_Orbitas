@@ -61,13 +61,13 @@
      </size>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QSpinBox" name="spinBox">
     <property name="geometry">
      <rect>
-      <x>920</x>
-      <y>50</y>
-      <width>71</width>
-      <height>21</height>
+      <x>940</x>
+      <y>40</y>
+      <width>42</width>
+      <height>22</height>
      </rect>
     </property>
    </widget>
